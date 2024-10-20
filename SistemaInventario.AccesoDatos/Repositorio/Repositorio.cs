@@ -27,7 +27,7 @@ namespace SistemaInventario.AccesoDatos.Repositorio
 
         public async Task<T> Obtener(int id)
         {
-            return await dbSet.FirstAsync(id); //select * from (solo por id)
+            return await dbSet.FindAsync(id);    // select * from (Solo por Id)
         }
 
         public async Task<IEnumerable<T>> ObtenerTodos(Expression<Func<T, bool>> filtro = null, Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null, string incluirPropiedades = null, bool isTracking = true)
@@ -88,5 +88,6 @@ namespace SistemaInventario.AccesoDatos.Repositorio
         {
             dbSet.RemoveRange(entidad);
         }
+
     }
 }

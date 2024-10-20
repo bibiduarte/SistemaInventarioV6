@@ -29,5 +29,6 @@ namespace SistemaInventario.AccesoDatos.Repositorio.IRepositorio
         void Remover(T entidad);//este metodo no puede ser asincrono
 
         void RemoverRango(IEnumerable<T> entidad);
+        
     }
 }
